@@ -12,9 +12,21 @@
   grid-template-columns: 10fr 30fr 30fr 15fr;
   grid-template-rows: 10fr 90fr;
 }
+h3{
+  color: aliceblue;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+h4{
+  border-bottom: solid black 4px;
+  display: block;
+  width: fit-content;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
 #searchbar {
   resize: none;
   background-color: burlywood;
+  border-radius: 15px;
+  width: 100%;
 }
 ul {
   display: grid;
@@ -27,6 +39,7 @@ p {
   padding: 0;
   gap: 0;
   block-size: 0%;
+  
 }
 #sidebar {
   position: sticky;
@@ -44,23 +57,27 @@ p {
   padding-left: 15px;
   font-weight: bold;
   background-image: url("./assets/tower.jpg");
-  background-position:center ;
+  background-size: 100% 100%;
+
+  
   color: azure;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   
 }
-#sidebar>div>img{
+.sidebaritem>img{
     
     vertical-align: bottom;
+    
+    width: 20px;
+    
 }
 .sidebaritem>p{
     
         display: inline-block;
         vertical-align: baseline;
-      
 }
 #main {
-  background-color: rgb(128, 212, 79);
+  background-color: rgb(196, 202, 255);
   grid-column: 2/4;
   grid-row: 2/3;
   display: grid;
@@ -83,15 +100,21 @@ p {
     justify-content: center;
     justify-items: center;
 }
+.iconholder>img{
+  width: 25px;
+  margin: 15px;
+}
 #main > * {
+  color: aliceblue;
   border: solid black 2px;
+  background-color: rgb(105, 105, 185);
 }
 #rightbar {
   background-color: rgb(255, 145, 0);
   grid-column: 4/5;
   grid-row: 2/3;
   font-size: 12px;
-  color: blue;
+  background-color: rgb(105, 105, 185);
 }
 #anuncios,
 #trendings {
@@ -103,25 +126,41 @@ p {
   grid-auto-flow: row;
   overflow-y: auto;
   gap: 5px;
+  color: aliceblue;
 }
 .trending {
+  color: aliceblue;
   display: grid;
   grid-template-columns: 3fr 10fr;
   gap: 3px;
   align-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .trending > img {
-  border: solid black 2px;
+  
   justify-self: center;
+  width: 100%;
+  margin-left: 30px;
   
 }
+.trending>div{
+  margin-left: 20px;
+}
 
-#anuncios > div,
+
+#anuncios > div{
+  background-color: rgb(105, 105, 185);
+  padding: 5px;
+}
 #trendings > div {
-  border: solid 3px black;
+  background-color: rgb(105, 105, 185);
+  
+  
+  
 }
 #head {
-  background-color: aqua;
+  background-color: rgb(105, 105, 185);
   padding: 5px;
   gap: 5px;
   grid-column: 2/5;
@@ -135,6 +174,8 @@ button {
   height: 40px;
   border-radius: 25px;
   border: solid 5px black;
+  background-color: rgb(105, 105, 185);
+  color: aliceblue;
 }
 #fullname {
   font-size: 32px;
@@ -150,16 +191,14 @@ button {
   grid-template-columns: 5fr 40fr 8fr 8fr 15fr;
   justify-items: left;
   align-content: center;
- 
+  justify-items: center
   /*grid-template-columns: 5fr 50fr 10fr 10fr 10fr 25fr;*/
 }
-#headup > *,
-#headdown > * {
-  border: solid 3px black;
-}
+
 #headdown {
   display: grid;
   grid-template-columns: 5fr 40fr 10fr 10fr 10fr;
   justify-items: center;
   align-content: center;
+  align-items: center
 }
